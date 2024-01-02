@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="mainstyle.css">
+        <title>Cheating</title>
+    </head>
+    <body>
+        <div class="Sandwhich">
+            <h2>Menu</h2>
+            <div class="SandwhichElements" id="Speedrunning">
+                <a href="Speedrunning.html">Speedrunning</a>
+            </div>
+            <div class="SandwhichElements" id="Disclaimer">
+                <a href="Disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="SandwhichElements" id="Categories">
+                <a href="Categories.html">Categories</a>
+            </div>
+            <div class="SandwhichElements" id="Glitches">
+                <a href="Glitches.html">Glitches</a>
+            </div>
+            <div class="SandwhichElements" id="TAS">
+                <a href="TAS.html">TAS</a>
+            </div>
+            <div class="SandwhichElements" id="Cheating">
+                <a href="Cheating.html">Cheating</a>
+            </div>
+            <div class="SandwhichElements" id="Glossary">
+                <a href="Glossary.html">Glossary</a>
+            </div>
+        </div>
+        <div class="NonSandwhich">
+            <h2 class="Headings">Cheating</h2>
+            <p>
+                However, good things will always have a pinch of salt with them. Cheating is quite a big box of salt, and moderators try extremely hard to stop any cheated videos from leaking into the record stream.
+            </p>
+            <p>There are many things moderators do to catch cheated runs:</p>
+            <ul>
+                <li>Analyzing the audio in a spectogram</li>
+                <li>Probabilty checks</li>
+                <li>Integrity of game files</li>
+                <li>Heavy lag (large gaps in subsequent frames) in the video</li>
+                <li>Change in parts of a game e.g. the physics</li>
+                <li>The run being in line with the rules of the category</li>
+                <li>Comparison to previous records</li>
+                <li>Checking the inputs/input methods</li>
+            </ul>
+            <p>It's like airport security. There are many layers of checking to stop illegal items from getting through.</p>
+            <p>
+                Nonetheless, some still get through. For example, in Trackmania, Riolu, a top player, was found to have cheated thousands of his records, even though he can prove his worth. Or how in Minecraft, Dream, 'accidentally' left some game mods enabled in his world record run, that improved the probabilities for him. This seems to be a recurring theme, where the best of the best will be the ones who end up cheating the most. Riolu gave his own personal view - he felt that since he was such a top-level runner, he deserved to have the record or those few milliseconds to set a new one and the fact that he was unable to get even after so many attempts was enough to push him past the edge and caused him to start cheating.
+            </p>
+            <p>
+                Alas once he was caught, there were serious repercussions, as there always is for cheaters. Bans on submissions are enacted to cheaters, perhaps fines. All to dissuade the act of cheating.
+            </p>
+            <br>
+            <hr>
+            <br>
+            <p>
+                Welcome to the end of this website! I hope you enjoyed your visit here.
+            </p>
+            <p>
+                If you would like to speedrun video games and show them, the best place is <a href="https://www.speedrun.com/">Speedrun.com</a>. Rules depend on category to category, but video proof must be shown with a timer. Cheating is not tolerated of course. Otherwise, feel free to run and submit! 
+            </p>
+            <p>
+                Now you can return some feedback on your experience to me. <span style="font-style:italic"> Due to the current implementation, this feedback is stored on your device, since there is no server to send this information to me.</span>
+            </p>
+            <form id="form" action="">
+                <label for="feedback">Feedback:</label><br>
+                <input type="text" id="feedback" name="feedback" placeholder="Feedback here...">
+                <input type="submit" value="Submit">
+            </form>
+            <p id="response"></p>
+            <div class="PageLinks">
+                <br>
+                <br>
+                <a id="backLink" style="float:left">Back</a>
+                <a id="forwardLink" style="float:right">Forward</a>
+            </div>
+        </div>
+        <script src="Cookie.js"></script>
+        <script>
+            let form = document.getElementById("form");
+            form.addEventListener("submit", function(event){
+                event.preventDefault();
+                let feedback = document.getElementById("feedback");
+                let response = document.getElementById("response");
+                if (feedback.value == ""){
+                    response.innerHTML = "It's fine not to give a response, thanks anyway for reading the webpage!";
+                } else {
+                    response.innerHTML = "Thanks for giving a response!";
+                    if (localStorage.cookieAcceptance == 1){
+                        const cookieArray = GetCookieArray("feedback")
+                        document.cookie = "feedback"+ String(cookieArray.length + 1) + "=" + feedback.value;
+                    }
+                }
+            });
+        </script>
+        <script src="PageCycle.js"></script>
+    </body>
+</html>

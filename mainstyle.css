@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Headings{
+    text-align: center;
+    margin-bottom: 8%;
+}
+.Speedrunning{
+    font-weight: bold; 
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+body {
+    height: 100%;
+    background-color: rgb(190, 228, 245);
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.Sandwhich{
+    position: fixed;
+    border-right: black 2px solid;
+    background-color: rgb(215, 239, 250);
+    padding: 1%;
+    height: 100%;
+    width: 9%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+.SandwhichElements{
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 2px;
+    padding: 1px;
+    overflow: hidden;
+}
+.SandwhichElements:hover{
+    background-color: rgb(202, 202, 202);
+    border-style: ridge;
+    text-decoration: underline;
+}
+.SandwhichElements a{
+    text-decoration: none;
+}
+.NonSandwhich{
+    position:absolute;
+    left: 10%;
+    right: 1%;
+}
+.PageLinks a{
+    text-decoration: none;
+    font-style: italic;
+    margin-bottom: 3%;
+}
+.PageLinks a:hover{
+    text-decoration: underline;
+}
+img{
+    float: right;
+    border: black solid 1px;
+    margin-left: 2%;
+    width: 40%;
+    height: auto;
+}
