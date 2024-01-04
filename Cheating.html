@@ -62,7 +62,7 @@
                 Welcome to the end of this website! I hope you enjoyed your visit here.
             </p>
             <p>
-                If you would like to speedrun video games and show them, the best place is <a href="https://www.speedrun.com/">Speedrun.com</a>. Rules depend on category to category, but video proof must be shown with a timer. Cheating is not tolerated of course. Otherwise, feel free to run and submit! 
+                If you would like to speedrun video games and show them, the best place is <a href="https://www.speedrun.com/">Speedrun.com ↗</a>. Rules depend on category to category, but video proof must be shown with a timer. Cheating is not tolerated of course. Otherwise, feel free to run and submit! 
             </p>
             <p>
                 Now you can return some feedback on your experience to me. <span style="font-style:italic"> Due to the current implementation, this feedback is stored on your device, since there is no server to send this information to me.</span>
@@ -90,10 +90,13 @@
                 if (feedback.value == ""){
                     response.innerHTML = "It's fine not to give a response, thanks anyway for reading the webpage!";
                 } else {
-                    response.innerHTML = "Thanks for giving a response!";
                     if (localStorage.cookieAcceptance == 1){
                         const cookieArray = GetCookieArray("feedback")
                         document.cookie = "feedback"+ String(cookieArray.length + 1) + "=" + feedback.value;
+                        response.innerHTML = "Thanks for giving a response!";
+                    }
+                    else {
+                        response.innerHTML = "Due to not accepting cookies, we cannot save your response.";
                     }
                 }
             });

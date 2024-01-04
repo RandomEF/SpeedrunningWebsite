@@ -37,9 +37,9 @@
                 background-color: white;
                 border: 5px red double;
                 border-radius: 20px;
-                height: 80%;
-                width: 70%;
-                transform: translate(0, 7%);
+                height: 40%;
+                width: 35%;
+                transform: translate(0, 32%);
                 margin: auto;
                 align-items: center;
                 justify-content: center;
@@ -121,9 +121,9 @@
                 There's something that these three phrases have in common. Food challenges. Those who do them certainly have determination. It's a challenge, after all.
             </p>
             <p>However, there is another word that links to these words:</p>
-            <h1 class="Speedrunning">Speedrunning.</h1>
+            <h1 style="font-family: 'Nunito Sans', sans-serif; font-weight:900">Speedrunning.</h1>
             <p>
-                Contrary to autocorrect, this is one word. <span class="Speedrunning">Speedrunning</span> isn't that well known of a hobby, which is rather surprising, since it is an incredibly awe-inspiring thing to watch.
+                Contrary to autocorrect, this is one word. <span>Speedrunning</span> isn't that well known of a hobby, which is rather surprising, since it is an incredibly awe-inspiring thing to watch.
             </p>
             <br>
             <hr>
@@ -132,7 +132,13 @@
                 But before I get ahead of myself here, I should probably explain what this is. It is not, as my dad thought, just running fast. We've got sprinting for that. No, at heart, it's just doing anything as fast as you can with a timer. If you've got a timer, you could call reloading your toilet paper, a speedrun.
             </p>
             <p>
-                The term, <span class="Speedrunning">speedrunning</span>, is usually attributed to games, as this is the area where it first came up. The allure of <span class="Speedrunning">speedrunning</span> is the same as the Guinness Book of Records. To set a record. To have that title. Nowadays, surprisingly, Guinness does see <span class="Speedrunning">speedrunning</span> as a valid way of getting world records.
+                The term, <span class="Speedrunning">speedrunning</span>, is usually attributed to games, as this is the area where it first came up. The allure of <span class="Speedrunning">speedrunning</span> is the same as the 
+                <span class="tooltipMaster">Guinness Book of Records 
+                    <span class="tooltip" style="width:200%">
+                        <img src="Guinness.png" alt="The Guinness logo" height="800" width="800">
+                        The Guinness World Records is an association that monitors and awards world records
+                    </span>
+                </span>. To set a record. To have that title. Nowadays, surprisingly, Guinness does see <span class="Speedrunning">speedrunning</span> as a valid way of getting world records.
             </p>
             <br>
             <hr>
@@ -204,8 +210,8 @@
             function FunnyX(){
                 timesClicked++
                 var x = document.getElementById("Funnyx");
-                var xPos = RandomRange(100, 3020);
-                var yPos = RandomRange(100, 2080);
+                var xPos = RandomRange(100, screen.height * 2);
+                var yPos = RandomRange(100, screen.width * 2);
                 x.style.position = "absolute";
                 x.style.left = xPos +"px";
                 x.style.top = yPos +"px";
