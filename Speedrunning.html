@@ -31,11 +31,12 @@
                 animation-delay: 2s;
                 animation-duration: 0.5s;
                 animation-fill-mode: forwards;
+                z-index: 2;
             }
             .FunnyXDiv{
                 display: flex;
                 background-color: white;
-                border: 5px red double;
+                border: 1vmin #006d77 outset;
                 border-radius: 20px;
                 height: 40%;
                 width: 35%;
@@ -53,8 +54,8 @@
                 font-size: xx-small;
             }
             .TheRealX{
-                background-color: #364146;
-                color: #364146;
+                background-color: #001F22;
+                color: #001F22;
                 position: absolute;
                 top: 1px;
                 left: 1px;
@@ -70,13 +71,25 @@
                 border-radius: 3px;
                 background-color: rgb(71, 199, 71);
             }
+            #AcceptCookies:hover{
+                background-color: rgb(45, 167, 45);
+            }
+            #AcceptCookies:focus{
+                background-color: rgb(0, 183, 255);
+            }
             #RejectCookies{
                 border: 2px red dashed;
                 border-radius: 3px;
                 background-color: rgb(224, 89, 89);
             }
+            #RejectCookies:hover{
+                background-color: rgb(216, 58, 58);
+            }
+            #RejectCookies:focus{
+                background-color: rgb(0, 183, 255);
+            }
             #SneakyMsg{
-                color: rgb(215, 239, 250);
+                color: rgb(190, 228, 245);
             }
             #SneakyMsg:hover{
                 color: black;
@@ -85,6 +98,10 @@
         <title>Speedrunning</title>
     </head>
     <body>
+        <div class="Banner">
+            <h2 style="display:inline; font-size: 10vmin;">Speedrunning</h2>
+            <img src="Jump.png" alt="jump" height="912" width="919" style="height: 100%; float:left; width:auto; border: none;">
+        </div>
         <div class="Sandwhich">
             <h2 onclick="alert('This isn\'t a button')">Menu</h2>
             <div class="SandwhichElements" id="Speedrunning">
@@ -108,9 +125,8 @@
             <div class="SandwhichElements" id="Glossary">
                 <a href="Glossary.html">Glossary</a>
             </div>
-            <p style="position:absolute; bottom:0;" onclick="document.write('Look at what you did, you cheeky bugger')" id="SneakyMsg">Sneaky msg</p>
+            <p style="position:absolute; bottom:15%;" onclick="document.write('Look at what you did, you cheeky bugger')" id="SneakyMsg">Sneaky msg</p>
         </div>
-
         <div class="NonSandwhich">
             <div class="Headings">
                 <h2>Serious challenges</h2>
@@ -123,7 +139,7 @@
             <p>However, there is another word that links to these words:</p>
             <h1 style="font-family: 'Nunito Sans', sans-serif; font-weight:900">Speedrunning.</h1>
             <p>
-                Contrary to autocorrect, this is one word. <span>Speedrunning</span> isn't that well known of a hobby, which is rather surprising, since it is an incredibly awe-inspiring thing to watch.
+                Contrary to autocorrect, this is one word. Speedrunning isn't that well known of a hobby, which is rather surprising, since it is an incredibly awe-inspiring thing to watch.
             </p>
             <br>
             <hr>
@@ -132,13 +148,13 @@
                 But before I get ahead of myself here, I should probably explain what this is. It is not, as my dad thought, just running fast. We've got sprinting for that. No, at heart, it's just doing anything as fast as you can with a timer. If you've got a timer, you could call reloading your toilet paper, a speedrun.
             </p>
             <p>
-                The term, <span class="Speedrunning">speedrunning</span>, is usually attributed to games, as this is the area where it first came up. The allure of <span class="Speedrunning">speedrunning</span> is the same as the 
+                The term, speedrunning, is usually attributed to games, as this is the area where it first came up. The allure of speedrunning is the same as the 
                 <span class="tooltipMaster">Guinness Book of Records 
                     <span class="tooltip" style="width:200%">
                         <img src="Guinness.png" alt="The Guinness logo" height="800" width="800">
                         The Guinness World Records is an association that monitors and awards world records
                     </span>
-                </span>. To set a record. To have that title. Nowadays, surprisingly, Guinness does see <span class="Speedrunning">speedrunning</span> as a valid way of getting world records.
+                </span>. To set a record. To have that title. Nowadays, surprisingly, Guinness does see speedrunning as a valid way of getting world records.
             </p>
             <br>
             <hr>
@@ -147,9 +163,9 @@
                 This website will be going through different topics in speedrunning:
             </p>
             <ol>
-                <li>What <span class="Speedrunning">Speedrunning</span> is (that's this page!)</li>
+                <li>What Speedrunning is (that's this page!)</li>
                 <li>A small disclaimer</li>
-                <li><span class="Speedrunning">Speedrunning</span> Categories</li>
+                <li>Speedrunning Categories</li>
                 <li>Glitches (extremely important for speedrunners)</li>
                 <li>Tool Assisted Speedruns (TAS)</li>
                 <li>Cheating</li>
@@ -172,8 +188,7 @@
                     <h2>Please accept cookies</h2>
                     <p>Cookies help the website run.</p>
                     <p>Without them, certain features on the website break down.</p>
-                    <p>Such as,</p>
-                    <p>Later on, there is a feedback page.</p>
+                    <p>Such as, later on, there is a feedback page.</p>
                     <p>Without cookies, your feedback is not saved.</p>
                     <button style="float:left; margin:10px" id="AcceptCookies" onclick="AcceptCookies()">Accept Cookies</button>
                     <button style="float:right; margin:10px" id="RejectCookies" onclick="RejectCookies()">Reject Cookies</button>

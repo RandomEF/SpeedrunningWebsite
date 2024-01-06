@@ -1,26 +1,45 @@
 *{
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.06em;
+    font-size: 2.12vmin;
 }
 h1{
-    font-size: 5em;
+    font-size: 5vmin;
 }
 h2{
-    font-size: 2em;
+    font-size: 4vmin;
 }
 h3{
-    font-size: 1.4em;
+    font-size: 2.5vmin;
 }
-
-.Headings{
-    text-align: center;
-    margin-bottom: 8%;
+img{
+    float: right;
+    border: black solid 0.25vmin;
+    border-radius: 3vmin;
+    margin-left: 2%;
+    width: 40%;
+    height: auto;
 }
 body {
     height: 100%;
     background-color: white;
     color: #2c2a4a;
+}
+.Banner{
+    position: fixed;
+    width: max-content;
+    text-align: center;
+    top: 0;
+    left: 0;
+    border-bottom: #2c2a4a 0.5vmin solid;
+    height: 14%;
+    width: 100%;
+    background-color: rgba(0, 109, 119, 1);
+    z-index: 1;
+    color: rgb(190, 228, 245);
+}
+.Headings{
+    text-align: center;
 }
 .clearfix::after{
     content: "";
@@ -29,12 +48,12 @@ body {
 }
 .Sandwhich{
     position: fixed;
-    border-right: black 2px solid;
+    border-right: #2c2a4a 0.25vmin solid;
     background-color: rgb(190, 228, 245);
     padding: 1%;
     height: 100%;
     width: 11%;
-    top: 0;
+    top: 14%;
     left: 0;
     overflow: auto;
 }
@@ -60,6 +79,7 @@ body {
     position:absolute;
     left: 12%;
     right: 12%;
+    top: 14%;
 }
 .PageLinks a{
     text-decoration: none;
@@ -68,14 +88,6 @@ body {
 }
 .PageLinks a:hover{
     text-decoration: underline;
-}
-img{
-    float: right;
-    border: black solid 1px;
-    border-radius: 3vmin;
-    margin-left: 2%;
-    width: 40%;
-    height: auto;
 }
 @keyframes tooltipHover {
     from {
@@ -104,6 +116,8 @@ img{
 .tooltipMaster{
     display: inline-block;
     position: relative;
+    font-weight: 900;
+    color: #DB3069;
 }
 .tooltipMaster .tooltip{
     visibility: hidden;
@@ -177,4 +191,36 @@ img{
 }
 .tooltip, .tooltipRight img{
     border-radius: 1vmin;
+}
+.ImgReferenceContainer{
+    position: relative;
+    float: right;
+    width: 40%;
+    border-radius: 3vmin;
+    border: black solid 1px;
+    margin-left: 2%;
+}
+.ImgReferenceImage{
+    display: block;
+    float: none;
+    width: 100%;
+    border-radius: 3vmin;
+    border: none;
+    margin-left: 0;
+    overflow: hidden;
+}
+.ImgReference{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.3s ease;
+    opacity: 0;
+    text-align: center;
+    border-bottom-left-radius: 3vmin;
+    border-bottom-right-radius: 3vmin;
+    color: white;
+}
+.ImgReferenceContainer:hover .ImgReference{
+    opacity: 1;
 }
